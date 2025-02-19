@@ -9,14 +9,14 @@ public class Abiturient {
     private String phone;
     private int grade;
 
-    public Abiturient(int id, int grade, String phone, String patronymic, String name, String surname, String address) {
+    public Abiturient(int id, String surname, String name, String patronymic, String address, String phone, int grade) {
         this.id = id;
-        this.grade = grade;
-        this.phone = phone;
-        this.patronymic = patronymic;
-        this.name = name;
         this.surname = surname;
+        this.name = name;
+        this.patronymic = patronymic;
         this.address = address;
+        this.phone = phone;
+        this.grade = grade;
     }
 
     public int getId() {
