@@ -14,3 +14,19 @@
             com.serzhputovski.blinovcourse.lab1.Converter - Warning
 2025-02-19 13:25:14 [main] ERROR
             com.serzhputovski.blinovcourse.lab1.Converter - Error
+2025-02-21 23:03:08 [main] ERROR
+            serzhputovski.blinovcourse.lab1.validator.AbiturientValidator - The grade must be between 0 and 400. Invalid grade: 500
+2025-02-21 23:03:08 [main] ERROR
+            serzhputovski.blinovcourse.lab1.validator.AbiturientValidator - The grade must be between 0 and 400. Invalid grade: -10
+2025-02-21 23:03:08 [main] ERROR
+            serzhputovski.blinovcourse.lab1.validator.AbiturientValidator - ID must be greater than zero. Invalid id: 0
+2025-02-21 23:03:08 [main] ERROR
+            serzhputovski.blinovcourse.lab1.validator.AbiturientValidator - Name is null or empty
+2025-02-21 23:03:08 [main] ERROR
+            serzhputovski.blinovcourse.lab1.validator.AbiturientValidator - Invalid phone number: 123456789
+2025-02-21 23:03:08 [main] ERROR
+            serzhputovski.blinovcourse.lab1.validator.AbiturientValidator - Surname is null or empty
+2025-02-21 23:03:08 [main] ERROR
+            serzhputovski.blinovcourse.lab1.validator.AbiturientValidator - Abiturient is null
+2025-02-21 23:03:08 [main] INFO 
+            serzhputovski.blinovcourse.lab1.validator.AbiturientValidator - Abiturient is valid: 1
