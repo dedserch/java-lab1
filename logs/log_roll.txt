@@ -30,3 +30,11 @@
             serzhputovski.blinovcourse.lab1.validator.AbiturientValidator - Abiturient is null
 2025-02-21 23:03:08 [main] INFO 
             serzhputovski.blinovcourse.lab1.validator.AbiturientValidator - Abiturient is valid: 1
+2025-02-24 01:43:11 [main] INFO 
+            serzhputovski.blinovcourse.lab1.service.AbiturientService - Abiturients with grade above 380 count: 2
+2025-02-24 01:43:11 [main] INFO 
+            serzhputovski.blinovcourse.lab1.service.AbiturientService - Passing abiturients count: 6
+2025-02-24 01:43:11 [main] INFO 
+            serzhputovski.blinovcourse.lab1.service.AbiturientService - Top abiturients count: 3
+2025-02-24 01:43:11 [main] INFO 
+            serzhputovski.blinovcourse.lab1.service.AbiturientService - Unsatisfactory abiturients count: 4
