@@ -38,3 +38,29 @@
             serzhputovski.blinovcourse.lab1.service.AbiturientService - Top abiturients count: 3
 2025-02-24 01:43:11 [main] INFO 
             serzhputovski.blinovcourse.lab1.service.AbiturientService - Unsatisfactory abiturients count: 4
+2025-03-11 14:41:24 [main] DEBUG
+            com.serzhputovski.lab1.service.AbiturientService - Searching abiturients with grade above threshold: 320
+2025-03-11 14:41:24 [main] INFO 
+            com.serzhputovski.lab1.service.AbiturientService - Found 2 abiturients with grade above 320
+2025-03-11 14:41:24 [main] DEBUG
+            com.serzhputovski.lab1.service.AbiturientService - Selecting top 2 abiturients among those with grade at least 300
+2025-03-11 14:41:24 [main] INFO 
+            com.serzhputovski.lab1.service.AbiturientService - Abiturients with passing grade (>= 300): [Abiturient{id=2, surname='Petrov', name=Petr, patronymic='Petrovich', address=Address2, phone=Phone2, grade=350}, Abiturient{id=3, surname='Sidorov', name=Sidor, patronymic='Sidorovich', address=Address3, phone=Phone3, grade=400}, Abiturient{id=4, surname='Smirnov', name=Sergey, patronymic='Sergeevich', address=Address4, phone=Phone4, grade=310}]
+2025-03-11 14:41:24 [main] INFO 
+            com.serzhputovski.lab1.service.AbiturientService - Top 2 abiturients: [Abiturient{id=3, surname='Sidorov', name=Sidor, patronymic='Sidorovich', address=Address3, phone=Phone3, grade=400}, Abiturient{id=2, surname='Petrov', name=Petr, patronymic='Petrovich', address=Address2, phone=Phone2, grade=350}]
+2025-03-11 14:41:24 [main] DEBUG
+            com.serzhputovski.lab1.service.AbiturientService - Searching abiturients with grade lower than unsatisfactory threshold: 300
+2025-03-11 14:41:24 [main] INFO 
+            com.serzhputovski.lab1.service.AbiturientService - Found 2 unsatisfactory abiturients
+2025-03-11 14:46:30 [main] DEBUG
+            com.serzhputovski.lab1.creator.AbiturientFactory - Creating a new Abiturient instance with id: 1, surname: Ivanov, name: Ivan, patronymic: Ivanovich, address: Address1, phone: invalid_phone, grade: 350
+2025-03-11 14:46:30 [main] ERROR
+            com.serzhputovski.lab1.validator.AbiturientValidator - Abiturient is invalid: 1
+2025-03-11 14:46:30 [main] ERROR
+            com.serzhputovski.lab1.creator.AbiturientFactory - Abiturient validation failed for id: 1
+2025-03-11 14:46:30 [main] DEBUG
+            com.serzhputovski.lab1.creator.AbiturientFactory - Creating a new Abiturient instance with id: 1, surname: Ivanov, name: Ivan, patronymic: Ivanovich, address: Address1, phone: +3751234567, grade: 350
+2025-03-11 14:46:30 [main] INFO 
+            com.serzhputovski.lab1.validator.AbiturientValidator - Abiturient is valid: 1
+2025-03-11 14:46:30 [main] INFO 
+            com.serzhputovski.lab1.creator.AbiturientFactory - Abiturient created successfully: Abiturient{id=1, surname='Ivanov', name=Ivan, patronymic='Ivanovich', address=Address1, phone=+3751234567, grade=350}
