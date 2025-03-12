@@ -2,7 +2,8 @@ package test.serzhputovski.lab1.service;
 
 import com.serzhputovski.lab1.entity.Abiturient;
 import com.serzhputovski.lab1.service.AbiturientService;
-import org.assertj.core.api.Assertions;
+import com.serzhputovski.lab1.service.impl.AbiturientServiceImpl;
+import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -16,7 +17,7 @@ public class AbiturientServiceTest {
 
     @BeforeMethod
     public void setUp() {
-        abiturientService = new AbiturientService();
+        abiturientService = new AbiturientServiceImpl();
         abiturients = new ArrayList<>();
 
         abiturients.add(new Abiturient(1, "Ivanov", "Ivan", "Ivanovich", "Address1", "Phone1", 280));
@@ -30,22 +31,26 @@ public class AbiturientServiceTest {
     public void testFindUnsatisfactoryAbiturients() {
         int unsatisfactoryThreshold = 300;
         List<Abiturient> result = abiturientService.findUnsatisfactoryAbiturients(abiturients, unsatisfactoryThreshold);
-        // Ожидаем, что будут выбраны абитуриенты с оценками меньше 300 (Ivanov и Fedorov)
-        Assertions.assertThat(result).hasSize(2);
-        Assertions.assertThat(result)
+
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(result).hasSize(2);
+        softly.assertThat(result)
                 .extracting(Abiturient::getSurname)
                 .containsExactlyInAnyOrder("Ivanov", "Fedorov");
+        softly.assertAll();
     }
 
     @Test
     public void testFindAbiturientsWithGradeAbove() {
         int threshold = 320;
         List<Abiturient> result = abiturientService.findAbiturientsWithGradeAbove(abiturients, threshold);
-        // Ожидаем, что будут выбраны абитуриенты с оценками выше 320 (Petrov и Sidorov)
-        Assertions.assertThat(result).hasSize(2);
-        Assertions.assertThat(result)
+
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(result).hasSize(2);
+        softly.assertThat(result)
                 .extracting(Abiturient::getSurname)
                 .containsExactlyInAnyOrder("Petrov", "Sidorov");
+        softly.assertAll();
     }
 
     @Test
@@ -53,10 +58,11 @@ public class AbiturientServiceTest {
         int n = 2;
         int passingThreshold = 300;
         List<Abiturient> result = abiturientService.findTopNAbiturients(abiturients, n, passingThreshold);
-        // Из абитуриентов с оценками >= 300 (Petrov, Sidorov, Smirnov)
-        // ожидаем, что топ-2 будут с самыми высокими оценками: Sidorov (400) и Petrov (350)
-        Assertions.assertThat(result).hasSize(2);
-        Assertions.assertThat(result.get(0).getSurname()).isEqualTo("Sidorov");
-        Assertions.assertThat(result.get(1).getSurname()).isEqualTo("Petrov");
+
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(result).hasSize(2);
+        softly.assertThat(result.get(0).getSurname()).isEqualTo("Sidorov");
+        softly.assertThat(result.get(1).getSurname()).isEqualTo("Petrov");
+        softly.assertAll();
     }
 }
